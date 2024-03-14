@@ -83,9 +83,8 @@ const play_a_lottery_ticket = async (delay = 0) => {
   let prize = score_tickets(last_winning_numbers, last_played_numbers);
   ledger += prize;
   result_as_number = prize;
-  let payout = prize + 1;
-  total_wins += payout;
-  biggest_payout_number = Math.max(biggest_payout_number, payout);
+  total_wins += prize;
+  biggest_payout_number = Math.max(biggest_payout_number, prize);
   total_losses -= 1;
   ticket_queue -= 1;
   await new Promise(resolve => setTimeout(resolve, delay));
