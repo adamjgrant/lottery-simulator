@@ -111,7 +111,7 @@ const begin_playing = async () => {
   while(ticket_queue > 0) {
     if (delay === 0) {
       await play_a_lottery_ticket();
-      delay = 1200;
+      delay = 1000;
     }
     else {
       delay = delay * (delay > 400 ? .7 : .95);
