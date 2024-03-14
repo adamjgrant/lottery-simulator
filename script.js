@@ -6,6 +6,7 @@ let last_played_numbers = [0, 0, 0, 0, 0, 0];
 let result_as_number = -1;
 let total_wins = 0;
 let total_losses = 0;
+let biggest_payout_number = 0;
 
 function getRandomInteger(min, max) {
   // Ensuring the min and max are integers
@@ -81,7 +82,9 @@ const play_a_lottery_ticket = async (delay = 0) => {
   let prize = score_tickets(last_winning_numbers, last_played_numbers);
   ledger += prize;
   result_as_number = prize;
-  total_wins += prize + 1;
+  let payout = prize + 1;
+  total_wins += payout;
+  biggest_payout_number = Math.max(biggest_payout_number, payout);
   total_losses -= 1;
   ticket_queue -= 1;
   await new Promise(resolve => setTimeout(resolve, delay));
@@ -102,6 +105,7 @@ const update_interface = async () => {
   result.innerText = `${result_as_word}: $${result_as_number}`
   wins.innerText = total_wins;
   losses.innerText = total_losses;
+  biggest_payout.innerText = biggest_payout_number;
 }
 
 const begin_playing = async () => {
@@ -151,3 +155,4 @@ const ledgerBalance = document.getElementById("ledger-balance");
 const result = document.getElementById("result");
 const wins = document.getElementById("wins");
 const losses = document.getElementById("losses");
+const biggest_payout = document.getElementById("biggest-payout");
