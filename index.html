@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+  <link rel="stylesheet" href="normalize.css">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="lottery.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="cleartype" content="on">
+  <meta charset="utf-8">
+  <script type="module">
+    document.documentElement.classList.remove('no-js');
+    document.documentElement.classList.add('js');
+  </script>
+</head>
+<body>
+  <div class="interface">┌───────────────────────────────────────────────────────────────┐
+│     ████ ███ ███  ████ █████ ████ █  █ ███  ████ █    █       │
+│    ░█░  ░█░ ░█░░█░█░░█░░░█  ░█░░ ░█ ░█░█░░█░█░░█░█   ░█       │
+│    ░████░█  ░███ ░████  ░█  ░█   ░████░███ ░████░█   ░█       │
+│     ░░░█░█  ░█░█ ░█ ░█  ░█  ░█   ░█ ░█░█░░█░█░░█░█   ░█       │
+│    ░████░███░█ ░█░█ ░█  ░█  ░████░█ ░█░███ ░█ ░█░████░████    │
+│    ░░░░ ░░░ ░   ░░  ░   ░   ░░░░ ░  ░ ░░░  ░  ░ ░░░░ ░░░░     │
+│     .───.     .───.     .───.     .───.     .───.   ┌─────┐   │
+│    (<div class="anchor"><div class="anchor-child" style="width:5ch" id="pick-1">0</div></div>     )   (<div class="anchor"><div class="anchor-child" id="pick-2" style="width:5ch">0</div></div>     )   (<div class="anchor"><div class="anchor-child" id="pick-3" style="width:5ch">0</div></div>     )   (<div class="anchor"><div class="anchor-child" id="pick-4" style="width:5ch">0</div></div>     )   (<div class="anchor"><div class="anchor-child" id="pick-5" style="width:5ch">0</div></div>     )  │<div class="anchor"><div class="anchor-child" id="pick-6" style="width:5ch">0</div></div>     │   │
+│     `───'     `───'     `───'     `───'     `───'   └─────┘   │
+│                                                               │
+│               (   /'    '  _  /| )  _  / _ _  _               │
+│          ┌────|/|///)/)//)(/─/─|/(///)()(-/─_)─────┐╔═════╗   │ 
+│          │               _/                        │          │
+│          │<div class="anchor"><div class="anchor-child" style="width: 5ch" id="win-1">0</div></div>         <div class="anchor"><div class="anchor-child" style="width: 5ch" id="win-2">0</div></div>           <div class="anchor"><div class="anchor-child style="width: 5ch" id="win-3">0</div></div>       <div class="anchor"><div class="anchor-child" style="width: 5ch" id="win-4">0</div></div>         <div class="anchor"><div class="anchor-child" style="width: 5ch" id="win-5">0</div></div>     │ <div class="anchor"><div class="anchor-child" style="width: 5ch" id="win-6">0</div></div>         │
+│          └─────────────────────────────────────────┘          │
+│                                                     ╚═════╝   │
+│                    ┌──────────────────────┐                   │
+│                   █│<div class="anchor"><div class="anchor-child" style="width: 22ch" id="result">LOSE: $1</div></div>                      │                   │
+│ WINS: $<div class="anchor"><div class="anchor-child" id="wins">0</div></div>           █└──────────────────────┘ LOSSES: $<div class="anchor"><div class="anchor-child" id="losses">0</div></div>         │
+│                   ████████████████████████                    │
+│                                                               │
+│░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░│
+│                                                               │
+│       |  |\ \  /_ \_ _|  __| |  /  _ )   \    \ | |  /        │
+│       __ | \  /   /  | \__ \ . <   _ \  _ \  .  | . <         │
+│      _| _|  _| _|_\___|____/_|\_\ ___/_/  _\_|\_|_|\_\        │
+│                                                               │
+│                       Ledger Balance                          │
+│                 ╔═════════════════════════╗                   │
+│                 ║<div class="anchor"><div style="width: 25ch" class="anchor-child" id="ledger-balance">$1,000,000</div>                         ║                   │
+│                 ╚═════════════════════════╝                   │
+│                                                               │
+│    ┌────────────────┐┌────────────────┐┌────────────────┐     │
+│    │    <div class="interactive" id="play-1">Play $1</div>     ││    <div class="interactive" id="play-5">Play $5</div>     ││    <div class="interactive" id="play-10">Play $10</div>    │     │
+│    └────────────────┘└────────────────┘└────────────────┘     │
+│                                                               │
+│    ┌────────────────┐┌────────────────┐┌────────────────┐     │
+│    │    <div class="interactive" id="play-25">Play $25</div>    ││   <div class="interactive" id="play-100">Play $100</div>    ││   <div class="interactive" id="play-1000">Play $1000</div>   │     │
+│    └────────────────┘└────────────────┘└────────────────┘     │
+│                                                               │
+│                                                               │
+└───────────────────────────────────────────────────────────────┘
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
