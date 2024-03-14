@@ -83,7 +83,7 @@ const play_a_lottery_ticket = async (delay = 0) => {
   let prize = score_tickets(last_winning_numbers, last_played_numbers);
   ledger += prize;
   result_as_number = prize;
-  total_wins += prize;
+  total_wins += Math.max(prize, 0);
   biggest_payout_number = Math.max(biggest_payout_number, prize);
   total_losses -= 1;
   ticket_queue -= 1;
