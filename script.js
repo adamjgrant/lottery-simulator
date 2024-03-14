@@ -1,4 +1,5 @@
 let ticket_queue = 0;
+let tickets_purchased_number = 0;
 let currently_playing = false;
 let ledger = 1000000;
 let last_winning_numbers = [0, 0, 0, 0, 0, 0];
@@ -106,6 +107,8 @@ const update_interface = async () => {
   wins.innerText = total_wins;
   losses.innerText = total_losses;
   biggest_payout.innerText = biggest_payout_number;
+  tickets_remaining.innerText = ticket_queue;
+  tickets_purchased.innerText = tickets_purchased_number;
 }
 
 const begin_playing = async () => {
@@ -124,12 +127,14 @@ const begin_playing = async () => {
     }
     await update_interface();
   }
+  tickets_purchased_number = 0;
   return currently_playing = false;
 }
 
 const play_amount = (amount) => {
   console.log(`Playing ${amount} lottery tickets`)
   ticket_queue += amount;
+  tickets_purchased_number += amount;
   begin_playing();
 }
 
@@ -156,3 +161,5 @@ const result = document.getElementById("result");
 const wins = document.getElementById("wins");
 const losses = document.getElementById("losses");
 const biggest_payout = document.getElementById("biggest-payout");
+const tickets_remaining = document.getElementById("tickets-remaining");
+const tickets_purchased = document.getElementById("tickets-purchased");
