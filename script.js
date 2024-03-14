@@ -120,8 +120,8 @@ const begin_playing = async () => {
       delay = 1000;
     }
     else {
-      delay = delay * (delay > 400 ? .7 : .95);
-      delay = Math.max(delay, 25);
+      delay = delay * (delay > 400 ? .7 : .99);
+      delay = Math.max(delay, 0);
       await play_a_lottery_ticket(delay);
     }
     await update_interface();
