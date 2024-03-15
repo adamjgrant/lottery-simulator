@@ -145,7 +145,7 @@ const button_names = [
   "play_10",
   "play_25",
   "play_100",
-  "play_1000"
+  "play_10000"
 ]
 
 button_names.forEach(id => {
